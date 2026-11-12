@@ -33,7 +33,7 @@ async function seed() {
   const ids = {
     AUDIT_ENDPOINT_ID: eps.endpoints?.[0]?.id, AUDIT_DATABASE_NAME: dbs.databases?.[0]?.name,
     AUDIT_ROLE_NAME: roles.roles?.find(r => !r.protected)?.name ?? roles.roles?.[0]?.name,
-    AUDIT_OPERATION_ID: ops.operations?.[0]?.id, AUDIT_MEMBER_ID: mem.members?.[0]?.id,
+    AUDIT_OPERATION_ID: ops.operations?.[0]?.id, AUDIT_MEMBER_ID: mem.members?.[0]?.member?.id ?? mem.members?.[0]?.id,
   };
   for (const [k, v] of Object.entries(ids)) if (!v) throw new Error(`seed: no value for ${k}`);
   return ids;
