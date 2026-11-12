@@ -1,0 +1,5 @@
+.env
+.env.*
+node_modules/
+runs/raw/
+spec/v2.json

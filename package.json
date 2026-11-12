@@ -1,0 +1,16 @@
+{
+  "name": "neon-api-audit",
+  "private": true,
+  "description": "Does Neon's API do what its docs say? Every read endpoint, checked against the published spec.",
+  "scripts": {
+    "fetch-spec": "sh scripts/fetch-spec.sh",
+    "static:spectral": "spectral lint spec/v2.json --ruleset rules/.spectral.yaml --format json --output runs/run0-spectral.json",
+    "static:redocly": "redocly lint spec/v2.json --config rules/redocly.yaml --format json > runs/run0-redocly.json",
+    "mock": "prism mock spec/v2.json --port 4010"
+  },
+  "devDependencies": {
+    "@redocly/cli": "2.72.0",
+    "@stoplight/prism-cli": "5.16.0",
+    "@stoplight/spectral-cli": "6.17.0"
+  }
+}
