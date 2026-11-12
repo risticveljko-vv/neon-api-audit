@@ -1,0 +1,16 @@
+# IDs are not secrets. Keys come from the environment (AUDIT_KEY), set per pass by harness/run.mjs.
+hooks = "harness/hooks.py"
+workers = 1
+rate-limit = "30/m"
+headers = { Authorization = "Bearer ${AUDIT_KEY}" }
+
+[parameters]
+"path.project_id" = "withered-mouse-88755965"
+"path.branch_id" = "br-old-forest-bdzbba7e"
+"path.org_id" = "org-weathered-mountain-47083441"
+"path.region_id" = "aws-us-east-2"
+"path.database_name" = "${AUDIT_DATABASE_NAME}"
+"path.role_name" = "${AUDIT_ROLE_NAME}"
+"path.endpoint_id" = "${AUDIT_ENDPOINT_ID}"
+"path.operation_id" = "${AUDIT_OPERATION_ID}"
+"path.member_id" = "${AUDIT_MEMBER_ID}"

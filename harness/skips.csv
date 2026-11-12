@@ -1,0 +1,8 @@
+operation_id,reason,note
+getOrganizationVPCEndpointDetails,feature,VPC endpoints need a higher-tier plan (Private Networking)
+getNeonAuthOAuthClient,id,no OAuth client exists; creating one is outside the setup
+listProjectBranchBucketObjects,id,no bucket exists (object storage off at setup)
+getProjectBranchBucketObject,id,no bucket or object exists
+getProjectBranchFunction,id,no function exists (functions off at setup)
+listProjectBranchLogFieldValues,id,no log field name to pass in
+getProjectBranchTrigger,id,no trigger exists

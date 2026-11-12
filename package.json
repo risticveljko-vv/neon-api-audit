@@ -6,7 +6,9 @@
     "fetch-spec": "sh scripts/fetch-spec.sh",
     "static:spectral": "spectral lint spec/v2.json --ruleset rules/.spectral.yaml --format json --output runs/run0-spectral.json",
     "static:redocly": "redocly lint spec/v2.json --config rules/redocly.yaml --format json > runs/run0-redocly.json",
-    "mock": "prism mock spec/v2.json --port 4010"
+    "mock": "prism mock spec/v2.json --port 4010",
+    "dry-run": "node --env-file=.env harness/run.mjs mock",
+    "run:live": "node --env-file=.env harness/run.mjs live"
   },
   "devDependencies": {
     "@redocly/cli": "2.72.0",
