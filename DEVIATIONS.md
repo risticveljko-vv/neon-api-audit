@@ -16,3 +16,4 @@ Each change to the frozen method, with when and why. Every deviation here was de
 - 7 operations are skipped with a reason fixed in `harness/skips.csv` (1 `feature`, 6 `id`), so 68 are tested.
 - The GET-only guard is double: `--include-method GET` plus a `before_call` hook that refuses anything else. In the first dry run, a filter mistake selected non-GET operations; the hook refused all 20 of them before sending, and only GETs reached the mock. The filter is fixed.
 - Run results stay out of this repo (`runs/` is git-ignored) until Neon has been told and 14 days have passed.
+- Day 2 (2026-11-13): the curl reproductions (`scripts/day2-repro.mjs`) first ran at 12:53 UTC, before the 24-hour mark; reproduction has no time rule. The 24-hour repeat is Run 1 (2026-11-12 16:18 UTC) against the unchanged rerun (2026-11-13 16:21 UTC), and the curl script ran again at 16:22 UTC with the same results.

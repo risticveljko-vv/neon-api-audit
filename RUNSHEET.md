@@ -38,6 +38,6 @@ Every step runs in the foreground, and nothing is scheduled or left running (Vel
 
 ## Day 2 (≥24 h later)
 
-- Reproduce every lead with curl. A second reader checks each one. Then ⟦V⟧ reads the findings.
+- Reproduce every lead with curl: `node --env-file=.env scripts/day2-repro.mjs` (`--dry` prints the requests). Rerun `npm run run:live` unchanged at least 24 hours after Run 1. A second reader checks each lead against the frozen spec, given only the evidence. Then ⟦V⟧ reads the findings.
 - Filing goes through Neon's feedback channel, one issue per report, and only on Veljko's go.
 - Earliest post: 14 days after filing, on a Friday. If filing happens on 13 or 16 Nov, that's Fri 4 Dec.
